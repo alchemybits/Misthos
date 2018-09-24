@@ -15,7 +15,8 @@ constructor(props) {
       password: "",
       email: "",
       auth: firebase.auth(),
-      isActive: false
+      isActive: false,
+      loading: false
 
     };
 
@@ -39,6 +40,7 @@ constructor(props) {
   register(e){
 
     e.preventDefault();
+    
     const toast = this.toast;
     firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((Luser) => {
         // [END createwithemail]
@@ -96,6 +98,8 @@ constructor(props) {
 
   userLogin(e){
     e.preventDefault();
+    let self = this;
+    this.setState({ loading: true });
     const toast = this.toast;
     const history = this.props.history;
 
@@ -111,6 +115,7 @@ constructor(props) {
     })
     .catch(function(error) {
       // Handle Errors here.
+      self.setState({ loading: false });
       var errorCode = error.code;
       var errorMessage = error.message;
       if (errorCode === 'auth/wrong-password') {

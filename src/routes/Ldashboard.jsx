@@ -31,6 +31,6 @@ const dashboardRoutes = [
     icon: Person,
     component: Login
   },
-  { path: "/",  sidebarName: "Login", navbarName: "Login", icon: Person,component: Landing }
+  { path: "/",  sidebarName: "Home", navbarName: "Home", icon: Person,component: Landing }
 ];
 export default dashboardRoutes;

@@ -10,11 +10,12 @@ import {
   dangerColor,
   roseColor
 } from "assets/jss/material-dashboard-react.jsx";
+import Loading from "../Loading/Loading";
 
 
 
 function template() {
-  return (
+  return this.state.loading === true ? <Loading /> : (
     <div>
     
 <div className="container">
