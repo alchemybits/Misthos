@@ -6,7 +6,7 @@ function template() {
     <div className="loading">
       <a href="/" class="logo"></a>
 		<article class="wwdc">
-		  <span class="spin">
+		  <span class="spin span">
 		      
 		      <div class="large circle one"></div>
 		      <div class="large circle two"></div>
@@ -17,7 +17,7 @@ function template() {
 		      <div class="large circle seven"></div>
 		      <div class="large circle eight"></div>
 		    </span>
-		  <span class="pulse">
+		  <span class="pulse span">
 		      
 		      <div class="small circle one"></div>
 		      <div class="small squircle two"></div>
@@ -29,7 +29,7 @@ function template() {
 		      <div class="small squircle eight"></div>
 		    </span>
 		  
-		  <span class="spin-reverse">
+		  <span class="spin-reverse span">
 		        <div class="large squircle one"></div>
 		      </span>
 		  <div class="large squircle two">

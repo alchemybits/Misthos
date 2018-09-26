@@ -5,7 +5,7 @@
   top: 1em;
 }
 
-span {
+.span {
   display: block;
   position: absolute;
   top: calc(50% - 10em);
@@ -14,17 +14,17 @@ span {
   height: 20em;
 }
 
-span.spin {
+.span.spin {
   -webkit-animation: spin 10s linear infinite;
           animation: spin 10s linear infinite;
 }
 
-span.spin-reverse {
+.span.spin-reverse {
   -webkit-animation: spin 30s linear infinite;
           animation: spin 30s linear infinite;
 }
 
-span.pulse {
+.span.pulse {
   -webkit-animation: spin-pulse 20s linear infinite;
           animation: spin-pulse 20s linear infinite;
 }
