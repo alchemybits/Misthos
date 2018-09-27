@@ -119,10 +119,10 @@ class Login extends React.Component {
         this.state.password
       )
       .then(function(user) {
-        console.log(user);
+        console.log("USER HERE",user);
         toast({
           type: "success",
-          title: "Welcome " + user.user.displayName
+          title: "Welcome " + user.displayName
         });
         history.push("/Dashboard");
       })
