@@ -38,6 +38,50 @@ const styles = {
 };
 
 class AddProduct extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: [24, 22],
+      selectedEnabled: "b",
+      checkedA: true,
+      checkedB: false,
+      simpleSelect: "",
+      multipleSelect: [],
+      tags: ["amsterdam", "washington", "sydney", "beijing"]
+    };
+    this.handleTags = this.handleTags.bind(this);
+    this.handleChangeEnabled = this.handleChangeEnabled.bind(this);
+  }
+  handleChange = name => event => {
+    this.setState({ [name]: event.target.checked });
+  };
+  handleChangeEnabled(event) {
+    this.setState({ selectedEnabled: event.target.value });
+  }
+  handleToggle(value) {
+    const { checked } = this.state;
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+
+    this.setState({
+      checked: newChecked
+    });
+  }
+  handleSimple = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  handleMultiple = event => {
+    this.setState({ multipleSelect: event.target.value });
+  };
+  handleTags(regularTags) {
+    this.setState({ tags: regularTags });
+  }
   render() {
     return template.call(this);
   }
